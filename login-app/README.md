@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# Login App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+This project has 4 pages: Home, Dashboard, Preferences and Login.
+Dashboard and Preferences pages are available only after login. 
+
+Login page save a token in SessionStorage if the login success.
 
 ## Available Scripts
 
