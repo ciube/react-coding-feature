@@ -1,12 +1,16 @@
 import { useState } from "react";
 
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 
 export default function UseStatePage() {
   const [count, setCount] = useState(0);
 
   function IncrementCount() {
     setCount(count + 1);
+  }
+
+  function DecrementCount() {
+    setCount(count - 1);
   }
 
   return (
@@ -18,9 +22,14 @@ export default function UseStatePage() {
       </Row>
       <Row>
         <Col md={"auto"}>
-          <button type="button" onClick={IncrementCount}>
+          <Button variant="success" onClick={IncrementCount}>
             Increment Count
-          </button>
+          </Button>
+        </Col>
+        <Col md={"auto"}>
+          <Button variant="danger" onClick={DecrementCount}>
+            Decrement Count
+          </Button>
         </Col>
         <Col md={"auto"}>
           <p>Count is {count}</p>
